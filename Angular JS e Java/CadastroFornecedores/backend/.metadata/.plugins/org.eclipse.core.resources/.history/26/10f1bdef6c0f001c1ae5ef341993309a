@@ -1,0 +1,38 @@
+package config;
+
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerResponseContext;
+import javax.ws.rs.container.ContainerResponseFilter;
+import resources.FornecedorResource;
+
+//http://localhost:8080/testando/v1/resources
+@ApplicationPath("v1")
+public class AppConfig extends Application implements ContainerResponseFilter {
+	private Set<Class<?>> resources = new HashSet<>();
+
+	public AppConfig() {
+		resources.add(FornecedorResource.class);
+	}
+
+	@Override
+	public Set<Class<?>> getClasses() {
+		return resources;
+	}
+
+	@Override
+	public void filter(final ContainerRequestContext requestContext, final ContainerResponseContext cres)
+			throws IOException {
+		cres.getHeaders().add("Access-Control-Allow-Origin", "*");
+		cres.getHeaders().add("Access-Control-Allow-Headers", "origin, content-type, accept, authorization");
+		cres.getHeaders().add("Access-Control-Allow-Credentials", "true");
+		cres.getHeaders().add("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");
+		cres.getHeaders().add("Access-Control-Max-Age", "1209600");
+	}
+}

@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\Estudo\Desafio_Gustavo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2804167276.index
+\teste\src\main\resources
+C:\Estudo\Desafio_Gustavo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1069765180.index
+\Backend\src\main\resources
+C:\Estudo\Desafio\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1069765180.index
+\Backend\src\main\java
+C:\Estudo\Desafio_Gustavo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\363832401.index
+\Backend\src\main\resources
+C:\Estudo\Desafio_Gustavo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3868153928.index
+\testando\src\main\java
+C:\Estudo\Desafio\backend\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3868153928.index
+\testando\src\main\java
+C:\Estudo\Desafio_Gustavo\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3817631760.index
+\teste\src\main\resources

@@ -1,0 +1,6 @@
+eclipse.m2.WorkspacelifecycleMappingsLocation=C\:/Estudo/Desafio_Gustavo/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml
+eclipse.m2.defaultRuntime=wildfly-23.0.2.Final
+eclipse.m2.runtimes=wildfly-23.0.2.Final
+eclipse.m2.runtimesNodes/wildfly-23.0.2.Final/location=C\:\\apache-maven-3.8.2
+eclipse.m2.runtimesNodes/wildfly-23.0.2.Final/type=EXTERNAL
+eclipse.preferences.version=1

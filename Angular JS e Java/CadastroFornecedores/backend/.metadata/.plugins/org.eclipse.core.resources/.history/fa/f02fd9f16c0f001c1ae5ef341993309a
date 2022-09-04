@@ -1,0 +1,29 @@
+package config;
+
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerResponseContext;
+import javax.ws.rs.container.ContainerResponseFilter;
+import resources.FornecedorResource;
+
+//http://localhost:8080/testando/v1/resources
+@ApplicationPath("v1")
+public class AppConfig extends Application {
+	private Set<Class<?>> resources = new HashSet<>();
+
+	public AppConfig() {
+		resources.add(FornecedorResource.class);
+	}
+
+	@Override
+	public Set<Class<?>> getClasses() {
+		return resources;
+	}
+
+}

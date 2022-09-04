@@ -1,0 +1,65 @@
+package repository;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+
+import entities.Fornecedor;
+
+public class FornecedorRepository {
+
+	private final static HashMap<String, Fornecedor> fornecedores = new HashMap<>();
+
+	public List<Fornecedor> GetAll() {
+		return new ArrayList<Fornecedor>(fornecedores.values());
+	}
+
+	public Fornecedor Get(final String cnpj) {
+		return fornecedores.get(cnpj);
+	}
+
+	public String Add(final Fornecedor fornecedor) throws Exception {
+
+		if (checkEmail(fornecedor.getEmail()) && checkCnpj(fornecedor.getCnpj())) {
+			fornecedores.put(fornecedor.getCnpj(), fornecedor);
+			return "cadastro realizado com sucesso!";
+		} else {
+			throw new Exception();
+		}
+
+	}
+
+	public void Edit(final Fornecedor fornecedor) throws Exception {
+		if (checkEmail(fornecedor.getEmail())) {
+			fornecedores.remove(fornecedor.getCnpj());
+			fornecedores.put(fornecedor.getCnpj(), fornecedor);
+		} else {
+			throw new Exception();
+		}
+	}
+
+	public void Delete(final String cnpj) {
+		fornecedores.remove(cnpj);
+	}
+
+	private boolean checkEmail(String email) throws Exception {
+		try {
+			InternetAddress emailAddr = new InternetAddress(email);
+			emailAddr.validate();
+			return true;
+		} catch (AddressException ex) {
+			throw new Exception("Email informado incorreto!");
+		}
+	}
+
+	private boolean checkCnpj(String cnpj) throws Exception {
+		if (Get(cnpj) != null) {
+			throw new Exception("CNPJ já cadastrado");
+		}
+
+		return true;
+	}
+}

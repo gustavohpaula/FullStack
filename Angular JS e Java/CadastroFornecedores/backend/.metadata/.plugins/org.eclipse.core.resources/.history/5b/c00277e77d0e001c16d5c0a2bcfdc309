@@ -1,0 +1,12 @@
+package controller;
+
+import entities.Fornecedor;
+
+public class FornecedorController {
+	
+	public FornecedorController(String email) {
+		
+		
+	}
+
+}

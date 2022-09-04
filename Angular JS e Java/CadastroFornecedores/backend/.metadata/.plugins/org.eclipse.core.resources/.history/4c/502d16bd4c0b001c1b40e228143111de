@@ -1,0 +1,9 @@
+package testando;
+
+import javax.faces.application.Application;
+import javax.ws.rs.ApplicationPath;
+
+@ApplicationPath("v1")
+public class AppConfig extends Application{
+
+}

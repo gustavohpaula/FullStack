@@ -1,0 +1,14 @@
+package controller;
+
+import javax.mail.internet.InternetAddress;
+
+import entities.Fornecedor;
+
+public class FornecedorController {
+	
+	public boolean checkEmail(String email) {
+		InternetAddress emailAddr = new InternetAddress(email);
+		
+		return false;
+	}
+}

@@ -1,0 +1,18 @@
+package testando;
+
+import java.util.Set;
+
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+@ApplicationPath("v1")
+public class AppConfig extends Application{
+	private Set<Class<?>> resources=new HashSet<>();
+
+	@Override
+	public Set<Class<?>> getClasses() {
+		// TODO Auto-generated method stub
+		return super.getClasses();
+	}
+	
+}

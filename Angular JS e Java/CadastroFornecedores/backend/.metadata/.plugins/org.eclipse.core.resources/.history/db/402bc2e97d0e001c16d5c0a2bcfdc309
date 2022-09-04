@@ -1,0 +1,10 @@
+package controller;
+
+import entities.Fornecedor;
+
+public class FornecedorController {
+	
+	public boolean checkEmail() {
+		return false;
+	}
+}
